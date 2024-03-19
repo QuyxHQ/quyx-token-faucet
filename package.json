@@ -1,0 +1,33 @@
+{
+  "name": "quyx-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create-keypair": "ts-node ./scripts/createKeypair.ts",
+    "create-token": "ts-node ./scripts/createToken.ts",
+    "add-metadata": "ts-node ./scripts/addTokenMetadata.ts",
+    "clean": "rm -rf ./token && rm -rf ./build",
+    "build": "rm -rf build/ && tsc",
+    "start": "node build/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "3.2.1",
+    "@metaplex-foundation/umi": "0.9.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "@metaplex-foundation/umi-web3js-adapters": "^0.9.1",
+    "@solana/spl-token": "^0.4.1",
+    "@solana/web3.js": "^1.91.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "helmet": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2",
+    "zod": "^3.22.4"
+  }
+}
