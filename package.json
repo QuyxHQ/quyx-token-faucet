@@ -9,8 +9,8 @@
     "add-metadata": "ts-node ./scripts/addTokenMetadata.ts",
     "clean": "rm -rf ./token && rm -rf ./build",
     "build": "rm -rf build/ && tsc",
-    "start": "node build/server.js",
-    "dev": "ts-node-dev --respawn --transpile-only server.ts"
+    "start": "node build/api/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only ./api/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,17 +20,23 @@
     "@metaplex-foundation/umi": "0.9.1",
     "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
     "@metaplex-foundation/umi-web3js-adapters": "^0.9.1",
+    "@sentry/node": "^7.101.1",
+    "@sentry/profiling-node": "^7.101.1",
     "@solana/spl-token": "^0.4.1",
     "@solana/web3.js": "^1.91.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
+    "express-rate-limit": "^7.2.0",
     "helmet": "^7.1.0",
+    "node-cache": "^5.1.2",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21"
   }
 }
