@@ -27,8 +27,8 @@ const signer = web3.Keypair.fromSecretKey(Uint8Array.from(secret));
 async function main() {
   console.log("Started process >>>>>>>>>>");
 
-  const RPC_URL = process.env.RPC_URL;
-  const umi = createUmi(RPC_URL ? RPC_URL : "https://api.devnet.solana.com");
+  const DEV_RPC_URL = process.env.DEV_RPC_URL;
+  const umi = createUmi(DEV_RPC_URL ? DEV_RPC_URL : "https://api.devnet.solana.com");
   const umiSigner = createSignerFromKeypair(umi, fromWeb3JsKeypair(signer));
   umi.use(signerIdentity(umiSigner, true));
 

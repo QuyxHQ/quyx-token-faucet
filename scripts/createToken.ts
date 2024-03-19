@@ -16,8 +16,8 @@ const signer = Keypair.fromSecretKey(Uint8Array.from(secret));
 async function main() {
   console.log("Started process >>>>>>>>>>");
 
-  const RPC_URL = process.env.RPC_URL;
-  const connection = new Connection(RPC_URL ? RPC_URL : clusterApiUrl("devnet"));
+  const DEV_RPC_URL = process.env.DEV_RPC_URL;
+  const connection = new Connection(DEV_RPC_URL ? DEV_RPC_URL : clusterApiUrl("devnet"));
 
   console.log("Querying signer balance >>>>>>>>>>");
   let signerBalance = await connection.getBalance(signer.publicKey);
